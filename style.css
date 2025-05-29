@@ -1,12 +1,28 @@
-body {
+/* ラッパーを90度時計回りに回転し、縦→横に見せる */
+.rotated-wrapper {
+  transform: rotate(90deg);
+  transform-origin: left top;
+  width: 100vh;
+  height: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+
   padding: 20px;
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  touch-action: manipulation; /* ダブルタップ無効 */
+  background-color: #fff;
   font-family: sans-serif;
 }
 
@@ -32,8 +48,9 @@ button {
 .center-buttons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
-  margin: 20px 0;
+  flex-wrap: wrap;
 }
 
 .center-buttons label {
