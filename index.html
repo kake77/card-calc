@@ -2,39 +2,40 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>回転ボタンUI</title>
-
-    <!-- ダブルタップによる拡大防止 -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
-
+    <title>縦画面フィールドUI</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- 画面全体を回転させるラッパー -->
-    <div class="rotated-wrapper">
-      <div class="button-row" id="top-buttons">
-        <button><span class="rotated-text">0</span></button>
-        <button><span class="rotated-text">0</span></button>
-        <button><span class="rotated-text">0</span></button>
-        <button><span class="rotated-text">0</span></button>
+    <div class="main-container">
+      <!-- 左の数値フィールド -->
+      <div class="side-column" id="left-fields">
+        <button class="left">0</button>
+        <button class="left">0</button>
+        <button class="left">0</button>
+        <button class="left">0</button>
       </div>
 
-      <div class="center-buttons">
-        <label><input type="radio" name="delta" value="-50" />-50</label>
-        <label><input type="radio" name="delta" value="-10" />-10</label>
-        <label><input type="radio" name="delta" value="10" />+10</label>
-        <label><input type="radio" name="delta" value="50" />+50</label>
+      <!-- 中央のラジオボタンとリセット -->
+      <div class="center-column">
+        <div class="radio-group">
+          <label><input type="radio" name="delta" value="-50" />-50</label>
+          <label><input type="radio" name="delta" value="-10" />-10</label>
+          <label><input type="radio" name="delta" value="10" />+10</label>
+          <label><input type="radio" name="delta" value="50" />+50</label>
+        </div>
         <button id="reset-button">リセット</button>
       </div>
 
-      <div class="button-row" id="bottom-buttons">
-        <button>0</button>
-        <button>0</button>
-        <button>0</button>
-        <button>0</button>
+      <!-- 右の数値フィールド -->
+      <div class="side-column" id="right-fields">
+        <button class="right">0</button>
+        <button class="right">0</button>
+        <button class="right">0</button>
+        <button class="right">0</button>
       </div>
     </div>
 

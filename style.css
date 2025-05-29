@@ -1,63 +1,60 @@
-/* ラッパーを90度時計回りに回転し、縦→横に見せる */
-.rotated-wrapper {
-  transform: rotate(90deg);
-  transform-origin: left top;
-  width: 100vh;
-  height: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 20px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
+html,
 body {
   margin: 0;
-  overflow: hidden;
-  touch-action: manipulation; /* ダブルタップ無効 */
+  padding: 0;
+  touch-action: manipulation;
   background-color: #fff;
   font-family: sans-serif;
 }
 
-.button-row {
+.main-container {
   display: flex;
   justify-content: space-around;
-  width: 100%;
-  max-width: 600px;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  margin: 5px;
-  min-width: 60px;
-}
-
-.rotated-text {
-  display: inline-block;
-  transform: rotate(180deg);
-}
-
-.center-buttons {
+/* 左右のボタン縦並び */
+.side-column {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.side-column button {
+  width: 120px;
+  height: 100px;
+  font-size: 25px;
+}
+
+/* 中央カラム */
+.center-column {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
-.center-buttons label {
-  font-size: 16px;
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.center-buttons button {
+.radio-group label {
+  font-size: 25px;
+}
+
+#reset-button {
   padding: 10px 20px;
   font-size: 16px;
+}
+
+.left {
+  transform: rotate(90deg);
+}
+.right {
+  transform: rotate(-90deg);
 }
