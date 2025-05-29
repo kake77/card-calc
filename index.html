@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ボタン加減アプリ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 上部ボタン（数値初期値0 + 180度回転） -->
+    <div class="button-row" id="top-buttons">
+      <button><span class="rotated-text">0</span></button>
+      <button><span class="rotated-text">0</span></button>
+      <button><span class="rotated-text">0</span></button>
+      <button><span class="rotated-text">0</span></button>
+    </div>
+
+    <!-- 中央：ラジオボタン -->
+    <div class="center-buttons">
+      <label><input type="radio" name="delta" value="-50" />-50</label>
+      <label><input type="radio" name="delta" value="-10" />-10</label>
+      <label><input type="radio" name="delta" value="10" />+10</label>
+      <label><input type="radio" name="delta" value="50" />+50</label>
+      <button id="reset-button">リセット</button>
+    </div>
+
+    <!-- 下部ボタン（数値初期値0） -->
+    <div class="button-row" id="bottom-buttons">
+      <button>0</button>
+      <button>0</button>
+      <button>0</button>
+      <button>0</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
